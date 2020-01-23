@@ -105,7 +105,7 @@ export interface Hooks {
 
 export type HookEvent = keyof Hooks;
 
-const knownHookEvents: readonly HookEvent[] = [
+const knownHookEvents: HookEvent[] = [
 	'beforeError',
 	'init',
 	'beforeRequest',
