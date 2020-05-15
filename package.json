@@ -12,7 +12,7 @@
 	"scripts": {
 		"test": "xo && tsc --noEmit && nyc --reporter=html --reporter=text ava",
 		"release": "np",
-		"build": "del-cli dist && tsc",
+		"build": "",
 		"prepare": "npm run build"
 	},
 	"files": [
