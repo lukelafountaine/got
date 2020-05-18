@@ -273,13 +273,13 @@ export default class Request extends Duplex implements RequestEvents<Request> {
     _writeRequest(chunk: any, encoding: string, callback: (error?: Error | null) => void): void;
     _final(callback: (error?: Error | null) => void): void;
     _destroy(error: Error | null, callback: (error: Error | null) => void): void;
-    get ip(): string | undefined;
-    get aborted(): boolean;
-    get socket(): Socket | undefined;
-    get downloadProgress(): Progress;
-    get uploadProgress(): Progress;
-    get timings(): Timings | undefined;
-    get isFromCache(): boolean | undefined;
+    ip: string | undefined;
+    aborted: boolean;
+    socket: Socket | undefined;
+    downloadProgress: Progress;
+    uploadProgress: Progress;
+    timings: Timings | undefined;
+    isFromCache: boolean | undefined;
     pipe<T extends NodeJS.WritableStream>(destination: T, options?: {
         end?: boolean;
     }): T;
